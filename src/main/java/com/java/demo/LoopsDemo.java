@@ -25,6 +25,6 @@ public class LoopsDemo {
         do {
             System.out.println("Iterating "+i);
             i++;
-        }while(i<=100);
+        }while(i<=105);
     }
 }
