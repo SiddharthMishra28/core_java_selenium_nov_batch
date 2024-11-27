@@ -1,4 +1,4 @@
-package com.java.demo;
+package com.java.procedural;
 
 public class MethodsDemo {
     // <ACCESS_SPECIFIER> <RETURN_TYPE> <METHOD_NAME>(...arguments) {

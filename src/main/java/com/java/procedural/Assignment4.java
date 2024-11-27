@@ -1,4 +1,4 @@
-package com.java.demo;
+package com.java.procedural;
 
 public class Assignment4 {
 //    String[] users = {"sid", "manjunath", "avnish", "bharath"};

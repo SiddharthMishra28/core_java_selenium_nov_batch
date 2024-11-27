@@ -1,4 +1,4 @@
-package com.java.demo;
+package com.java.procedural;
 
 public class LoopsDemo {
     public static void main(String[] args) {

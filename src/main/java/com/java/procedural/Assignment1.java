@@ -1,4 +1,4 @@
-package com.java.demo;
+package com.java.procedural;
 
 public class Assignment1 {
     // BILLING SYSTEM FOR SUPER MART

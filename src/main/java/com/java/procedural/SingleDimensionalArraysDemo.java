@@ -1,4 +1,4 @@
-package com.java.demo;
+package com.java.procedural;
 
 public class SingleDimensionalArraysDemo {
     // Need to know the data size in advance || determine the data size
