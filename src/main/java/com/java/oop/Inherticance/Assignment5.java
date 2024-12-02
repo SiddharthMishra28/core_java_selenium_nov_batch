@@ -1,4 +1,4 @@
-package com.java.oop;
+package com.java.oop.Inherticance;
 
 public class Assignment5 {
     // CREATE A PARENT CLASS CALLED AS VEHICLE

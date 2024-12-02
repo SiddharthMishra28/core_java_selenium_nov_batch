@@ -1,4 +1,4 @@
-package com.java.oop;
+package com.java.oop.Inherticance;
 
 // EXTENDS KEYWORD IS USED TO ESTABLISH IS-A RELATIOSHIP OF PARENT CHILD TYPE
 public class Car extends Vehicle {
