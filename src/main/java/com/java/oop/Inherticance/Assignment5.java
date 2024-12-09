@@ -1,5 +1,7 @@
 package com.java.oop.Inherticance;
 
+import com.java.oop.encapsulation.Banking;
+
 public class Assignment5 {
     // CREATE A PARENT CLASS CALLED AS VEHICLE
     // DECLARE PROPERTIES OF A VEHICLE
@@ -13,4 +15,8 @@ public class Assignment5 {
     // DECLARE METHOD CALLED moveTruck(int speed)
     // CHECK THAT MOVE TRUCK SHOULD WORK ONLY IF VEHICLE IS STARTED!
     // CHECK THAT APPROPRIATE GEAR IS SELECTED WHEN A SPEED IS SUPPLIED TO TRUCK
+    public static void main(String[] args) {
+        Banking banking = new Banking();
+//        banking DEFAULT MEMBERS ARE NOT ACCESSIBLE
+    }
 }
