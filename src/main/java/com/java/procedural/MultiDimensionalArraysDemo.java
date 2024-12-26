@@ -14,6 +14,7 @@ public class MultiDimensionalArraysDemo {
                 {"manjunath", "25", "manjunath@rediff.com", "hello"},  // 2
                 {"avanish", "27", "avanish@hotmail.com"},   // 3
         };
+//        System.out.println(studentsData);
 //        System.out.println(studentsData[1][2]);
         for(int i=0; i<studentsData.length; i++) {
             for(int j=0; j<studentsData[i].length; j++) {
