@@ -1,12 +1,13 @@
 package com.java.project.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Business {
     private int businesId;
     private String businessName;
     private String businessDescription;
-    private List<Customer> customers;
+    private List<Customer> customers = new ArrayList<>();
 
     public Business() {
     }
@@ -58,5 +59,9 @@ public class Business {
                 ", businessDescription='" + businessDescription + '\'' +
                 ", customers=" + customers +
                 '}';
+    }
+
+    public void addCustomer(Customer customer) {
+        customers.add(customer);
     }
 }

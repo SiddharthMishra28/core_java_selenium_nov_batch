@@ -24,10 +24,10 @@ public class Main {
             option = sc.nextInt();
             switch (option) {
                 case 1:
-                    businessManager.manageBusiness();
+                    businessManager.manageBusiness(customerManager);
                     break;
                 case 2:
-                    // customermanager
+                    customerManager.manageCustomer();
                     break;
                 case 3:
                     // addressmanager

@@ -1,6 +1,7 @@
 package com.java.project.utils;
 
 import com.java.project.entities.Business;
+import com.java.project.entities.Customer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +11,7 @@ public class BusinessManager {
     List<Business> businessList = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
-    public void manageBusiness() {
+    public void manageBusiness(CustomerManager customerManager) {
         boolean isRunning = true;
         while(isRunning) {
             showBusinessMenu();
@@ -34,6 +35,14 @@ public class BusinessManager {
                     break;
 
                 case 5:
+                    associateCustomer(customerManager);
+                    break;
+
+                case 6:
+                    showBusinessDetails();
+                    break;
+
+                case 7:
                     isRunning = false;
                     break;
             }
@@ -46,7 +55,9 @@ public class BusinessManager {
         System.out.println("2. Get Business Details");
         System.out.println("3. Update Business Details");
         System.out.println("4. Delete a Business");
-        System.out.println("5. Go back to Main Menu");
+        System.out.println("5. Associate a Business with a Customer");
+        System.out.println("6. Show Business Details");
+        System.out.println("7. Go back to Main Menu");
     }
 
     public void createBusiness() {
@@ -122,4 +133,46 @@ public class BusinessManager {
         }
         return null;
     }
+
+    public void associateCustomer(CustomerManager customerManager){
+        System.out.println("Enter Business ID to associate with a customer");
+        int id = sc.nextInt();
+        sc.nextLine();
+        Business business = findBusinessById(id);
+        if(business != null){
+            System.out.println("Enter the customer id to associate with this business");
+            int customerId = sc.nextInt();
+            sc.nextLine();
+            Customer customer = customerManager.findCustomerById(customerId);
+            if(customer != null) {
+                business.addCustomer(customer);
+                System.out.println("Customer added successfully!");
+            }else {
+                System.out.println("Customer with id "+customerId+" doesn't exist");
+            }
+        }else {
+            System.out.println("Business with id "+id+" doesn't exist");
+        }
+    }
+
+    public void showBusinessDetails() {
+        System.out.println("Enter Business ID to view details : ");
+        int businessId = sc.nextInt();
+        sc.nextLine();
+        Business business = findBusinessById(businessId);
+            if(business != null){
+                System.out.println("Business id : "+business.getBusinesId());
+                System.out.println("Business name : "+business.getBusinessName());
+                System.out.println("Business Description : "+business.getBusinessDescription());
+                System.out.println("Customers associated with business "+business.getBusinessName()+" : ");
+                for(Customer customer : business.getCustomers()) {
+                    System.out.println("Customer id "+customer.getCustomerId());
+                    System.out.println("Customer name : "+customer.getCustomerName());
+                    System.out.println("Customer email : "+customer.getCustomerEmail());
+                    System.out.println("Customer phone number : "+customer.getCustomerPhone());
+                }
+            }else {
+                System.out.println("Business with id "+businessId+" doesn't exist");
+            }
+        }
 }

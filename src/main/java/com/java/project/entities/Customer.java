@@ -1,5 +1,6 @@
 package com.java.project.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Customer {
@@ -7,7 +8,7 @@ public class Customer {
     private String customerName;
     private String customerEmail;
     private String customerPhone;
-    private List<Address> addresses;
+    private List<Address> addresses = new ArrayList<>();
 
     public Customer() {
     }
@@ -58,5 +59,16 @@ public class Customer {
 
     public void setAddresses(List<Address> addresses) {
         this.addresses = addresses;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "customerId=" + customerId +
+                ", customerName='" + customerName + '\'' +
+                ", customerEmail='" + customerEmail + '\'' +
+                ", customerPhone='" + customerPhone + '\'' +
+                ", addresses=" + addresses +
+                '}';
     }
 }
